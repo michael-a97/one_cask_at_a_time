@@ -3,14 +3,23 @@
 Exam project
 
 ## Getting Started
+Authentication
+- Use the following credentials for testing
+  - email: john@doe.com and password:1234
+  - email: Jane@doe.com and password:4321
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Key dependencies of the project
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Package         | Usage                       |
+|-----------------|-----------------------------|
+| flutter_bloc & bloc      | State management                     |
+| auto_route            | Navigation                         |
+| connectivity_plus        |  For checking connectivity status             |
+| dartz          | For Functional programming types (Either, Unit)                  |
+| Json_serializable        | for mapping objects to and from json |
+| toggle_switch | To implement toggle switches in product details      |
+| injectable and get_it| for dependency injection |
+|flutter_svg | for displaying svg images |
+|mocktail| for mocking in unit, bloc, and widget tests|
+|pubspec_dependency_sorter| for sorting pubspec dependencies|
