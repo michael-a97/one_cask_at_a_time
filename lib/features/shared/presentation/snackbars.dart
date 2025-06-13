@@ -31,13 +31,13 @@ void showSuccessSnackBar(
 }
 
 void showErrorSnackBar(
-    BuildContext context, {
-      String? title,
-      required String message,
-      Duration? duration,
-      bool clearCurrentSnackBar = false,
-      SnackBarAction? action,
-    }) {
+  BuildContext context, {
+  String? title,
+  required String message,
+  Duration? duration,
+  bool clearCurrentSnackBar = false,
+  SnackBarAction? action,
+}) {
   final scaffoldMessenger = ScaffoldMessenger.of(context);
   if (clearCurrentSnackBar) {
     scaffoldMessenger.clearSnackBars();

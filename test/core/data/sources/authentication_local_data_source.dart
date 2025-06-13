@@ -17,7 +17,7 @@ void main() {
         );
         expect(result, right(unit));
       });
-      
+
       test('should return invalidCredentials when email and password are not '
           'valid', () async {
         final result = await authenticationLocalDataSource.signIn(

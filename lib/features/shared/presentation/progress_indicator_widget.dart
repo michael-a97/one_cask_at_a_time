@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../shared.dart';
-
 class ProgressIndicatorWidget extends StatelessWidget {
   const ProgressIndicatorWidget({super.key});
 

@@ -14,7 +14,8 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
   Widget build(BuildContext context) {
     return TextFormField(
       onTapOutside: (_) => FocusScope.of(context).unfocus(),
-      onChanged: (value) => context.read<SignInCubit>().onPasswordChanged(value),
+      onChanged: (value) =>
+          context.read<SignInCubit>().onPasswordChanged(value),
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (value) {
         if (value == null || value.isEmpty) {
