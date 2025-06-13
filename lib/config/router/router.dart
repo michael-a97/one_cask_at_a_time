@@ -9,8 +9,8 @@ export 'router.gr.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AdaptiveRoute(page: SplashRoute.page),
+    AdaptiveRoute(page: SplashRoute.page, initial: true),
     AdaptiveRoute(page: SignInRoute.page),
-    AdaptiveRoute(page: HomeRoute.page, initial: true),
+    AdaptiveRoute(page: HomeRoute.page),
   ];
 }
