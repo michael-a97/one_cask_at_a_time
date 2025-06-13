@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="one_cask_at_a_time"
+        android:label="One cask at a time"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
