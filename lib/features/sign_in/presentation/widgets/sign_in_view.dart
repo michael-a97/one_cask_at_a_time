@@ -60,6 +60,7 @@ class SignInView extends StatelessWidget {
       ).show(context);
     } else if (state.status.isSuccess) {
       showSuccessSnackBar(context, message: 'Successfully signed in!');
+      context.router.replaceAll([const HomeRoute()]);
     } else if (state.status.isFailure) {
       showErrorSnackBar(
         context,

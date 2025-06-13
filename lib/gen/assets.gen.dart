@@ -15,18 +15,44 @@ class $AssetsImagesGen {
   /// File path: assets/images/logo.jpg
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.jpg');
 
+  /// File path: assets/images/product.png
+  AssetGenImage get product => const AssetGenImage('assets/images/product.png');
+
   /// File path: assets/images/splash_background.png
   AssetGenImage get splashBackground =>
       const AssetGenImage('assets/images/splash_background.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [logo, splashBackground];
+  List<AssetGenImage> get values => [logo, product, splashBackground];
+}
+
+class $AssetsSvgsGen {
+  const $AssetsSvgsGen();
+
+  /// File path: assets/svgs/bottle.svg
+  String get bottle => 'assets/svgs/bottle.svg';
+
+  /// File path: assets/svgs/collection.svg
+  String get collection => 'assets/svgs/collection.svg';
+
+  /// File path: assets/svgs/notification.svg
+  String get notification => 'assets/svgs/notification.svg';
+
+  /// File path: assets/svgs/scan.svg
+  String get scan => 'assets/svgs/scan.svg';
+
+  /// File path: assets/svgs/settings.svg
+  String get settings => 'assets/svgs/settings.svg';
+
+  /// List of all assets
+  List<String> get values => [bottle, collection, notification, scan, settings];
 }
 
 class Assets {
   const Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsSvgsGen svgs = $AssetsSvgsGen();
 }
 
 class AssetGenImage {
