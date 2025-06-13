@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 part 'spacing.dart';
 
 class AppColors {
@@ -70,11 +71,12 @@ final theme = ThemeData(
         fontFamily: serifFont,
         fontSize: 14,
       ),
-      padding: const EdgeInsets.symmetric(vertical: Spacing.lg),
+      padding: const EdgeInsets.symmetric(vertical: Spacing.xl),
       elevation: 0,
     ),
   ),
 
+  appBarTheme: const AppBarTheme(color: Colors.transparent),
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(
       foregroundColor: AppColors.secondaryColor,
@@ -86,5 +88,33 @@ final theme = ThemeData(
       padding: const EdgeInsets.symmetric(vertical: Spacing.lg),
       elevation: 0,
     ),
+  ),
+  textSelectionTheme: TextSelectionThemeData(
+    cursorColor: AppColors.secondaryColor,
+    selectionColor: AppColors.secondaryColor.withAlpha(40),
+    selectionHandleColor: AppColors.secondaryColor,
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    activeIndicatorBorder: const BorderSide(
+      color: AppColors.secondaryColor,
+      width: 3,
+    ),
+    focusedBorder: const UnderlineInputBorder(
+      borderSide: BorderSide(color: AppColors.secondaryColor),
+    ),
+    border: const UnderlineInputBorder(
+      borderSide: BorderSide(color: AppColors.secondaryColor),
+    ),
+    enabledBorder: const UnderlineInputBorder(
+      borderSide: BorderSide(color: AppColors.secondaryColor),
+    ),
+    suffixIconColor: AppColors.secondaryColor,
+    labelStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: sansSerifFont,
+      fontSize: 14,
+      color: AppColors.secondaryColor,
+    ),
+    errorMaxLines: 2,
   ),
 );

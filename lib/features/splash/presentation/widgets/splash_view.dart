@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -78,7 +79,9 @@ class _SplashViewState extends State<SplashView> {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.router.push(const SignInRoute());
+                        },
                         child: const Text('Sign in first'),
                       ),
                     ],

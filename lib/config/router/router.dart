@@ -10,5 +10,6 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AdaptiveRoute(page: SplashRoute.page, initial: true),
+    AdaptiveRoute(page: SignInRoute.page),
   ];
 }
