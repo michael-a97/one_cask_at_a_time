@@ -1,22 +1,20 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../domain/domain.dart';
-import '../dtos/user.dart';
+import '../../../domain/domain.dart';
+import '../../dtos/user/user.dart';
+part 'users_json.dart';
 
 @Injectable(as: AuthenticationDataSource)
 class AuthenticationLocalDataSource implements AuthenticationDataSource {
-  static const registeredUsers = <User>[
-    User(email: 'John@doe.com', password: '1234'),
-    User(email: 'Jane@doe.com', password: '4321'),
-  ];
-
   @override
   Future<Either<AuthenticationFailure, Unit>> signIn({
     required String email,
     required String password,
   }) async {
     await Future.delayed(const Duration(seconds: 1)); // Simulate network delay
+    final registeredUsers = userJson.map(User.fromJson).toList();
+
     final user = registeredUsers
         .where(
           (user) =>

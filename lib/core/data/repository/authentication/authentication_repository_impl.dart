@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../domain/domain.dart';
+import '../../../domain/domain.dart';
 
 @Injectable(as: AuthenticationRepository)
 class AuthenticationRepositoryImpl extends AuthenticationRepository {

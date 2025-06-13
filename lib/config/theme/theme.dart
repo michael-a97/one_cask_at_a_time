@@ -39,13 +39,13 @@ final theme = ThemeData(
     ),
     displayMedium: TextStyle(
       fontFamily: serifFont,
-      fontSize: 32,
+      fontSize: 22,
       fontWeight: FontWeight.bold,
       color: Colors.white,
     ),
     displaySmall: TextStyle(
       fontFamily: serifFont,
-      fontSize: 24,
+      fontSize: 18,
       fontWeight: FontWeight.bold,
       color: Colors.white,
     ),
@@ -116,5 +116,25 @@ final theme = ThemeData(
       color: AppColors.secondaryColor,
     ),
     errorMaxLines: 2,
+  ),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: AppColors.primaryDarkColor,
+    unselectedItemColor: const Color(0xFF899194),
+    selectedItemColor: Colors.white,
+    selectedLabelStyle: TextStyle(
+      fontFamily: sansSerifFont,
+      fontSize: 16,
+      color: Colors.white70,
+    ),
+    unselectedLabelStyle: TextStyle(
+      fontFamily: sansSerifFont,
+      fontSize: 16,
+      color: const Color(0xFF899194),
+    ),
+  ),
+  progressIndicatorTheme: const ProgressIndicatorThemeData(
+    color: AppColors.primaryDarkColor,
+    circularTrackColor: AppColors.secondaryColor,
+    refreshBackgroundColor: AppColors.secondaryColor,
   ),
 );
