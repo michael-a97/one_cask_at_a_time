@@ -12,5 +12,6 @@ class AppRouter extends RootStackRouter {
     AdaptiveRoute(page: SplashRoute.page, initial: true),
     AdaptiveRoute(page: SignInRoute.page),
     AdaptiveRoute(page: HomeRoute.page),
+    AdaptiveRoute(page: ProductDetailsRoute.page),
   ];
 }

@@ -1,9 +1,11 @@
-part of 'splash_view.dart';
+import 'package:flutter/material.dart';
 
-class SplashBackground extends StatelessWidget {
+import '../../../gen/assets.gen.dart';
+
+class DecoratedBackground extends StatelessWidget {
   final Widget child;
 
-  const SplashBackground({super.key, required this.child});
+  const DecoratedBackground({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {

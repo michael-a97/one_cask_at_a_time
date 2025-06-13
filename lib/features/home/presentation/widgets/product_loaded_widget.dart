@@ -34,19 +34,22 @@ class _ProductCard extends StatelessWidget {
     final theme = Theme.of(context);
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Center(child: Image.asset(Assets.images.product.path)),
-            ),
-            Text(product.name, style: theme.textTheme.displayMedium),
-            Text('${product.year}', style: theme.textTheme.displaySmall),
-            Text('112/158', style: theme.textTheme.titleSmall),
-            const Gap(Spacing.lg),
-          ],
+      child: InkWell(
+        onTap: () => context.router.push(ProductDetailsRoute(product: product)),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Center(child: Image.asset(Assets.images.product.path)),
+              ),
+              Text(product.name, style: theme.textTheme.displayMedium),
+              Text('${product.year}', style: theme.textTheme.displaySmall),
+              Text('112/158', style: theme.textTheme.titleSmall),
+              const Gap(Spacing.lg),
+            ],
+          ),
         ),
       ),
     );
