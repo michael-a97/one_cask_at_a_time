@@ -42,7 +42,12 @@ class _ProductCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: Center(child: Image.asset(Assets.images.product.path)),
+                child: Center(
+                  child: Hero(
+                    tag: 'product_${product.id}',
+                    child: Image.asset(Assets.images.product.path),
+                  ),
+                ),
               ),
               Text(product.name, style: theme.textTheme.displayMedium),
               Text('${product.year}', style: theme.textTheme.displaySmall),

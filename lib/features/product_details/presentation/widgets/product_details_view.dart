@@ -44,7 +44,10 @@ class _ProductDetailsViewState extends State<ProductDetailsView>
         child: ListView(
           padding: const EdgeInsets.only(bottom: Spacing.xxxl + Spacing.xxxl),
           children: [
-            Image.asset(Assets.images.product.path),
+            Hero(
+              tag: 'product_${widget.product.id}',
+              child: Image.asset(Assets.images.product.path),
+            ),
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4),
