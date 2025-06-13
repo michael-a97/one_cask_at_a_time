@@ -134,7 +134,7 @@ final theme = ThemeData(
   ),
   progressIndicatorTheme: const ProgressIndicatorThemeData(
     color: AppColors.primaryDarkColor,
-    circularTrackColor: AppColors.secondaryColor,
+    circularTrackColor: AppColors.primaryDarkColor,
     refreshBackgroundColor: AppColors.secondaryColor,
   ),
 );
