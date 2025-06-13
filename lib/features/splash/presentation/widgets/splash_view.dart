@@ -6,8 +6,7 @@ import 'package:gap/gap.dart';
 
 import '../../../../config/config.dart';
 import '../../../../gen/assets.gen.dart';
-
-part 'splash_background.dart';
+import '../../../features.dart';
 
 part 'app_logo.dart';
 
@@ -28,7 +27,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SplashBackground(
+      body: DecoratedBackground(
         child: Center(
           child: AppLogo(size: MediaQuery.of(context).size.width * 0.4),
         ),

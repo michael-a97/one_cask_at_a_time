@@ -9,34 +9,34 @@ class Product extends Equatable {
   final String name;
   final int year;
   final int? age;
-  final String? distillery;
-  final String? region;
-  final String? country;
-  final String? type;
-  final String? ageStatement;
-  final String? filled;
-  final String? bottled;
-  final String? caskNumber;
-  final String? abv;
-  final String? size;
-  final String? finish;
+  final String distillery;
+  final String region;
+  final String country;
+  final String type;
+  final String ageStatement;
+  final String filled;
+  final String bottled;
+  final String caskNumber;
+  final String abv;
+  final String size;
+  final String finish;
 
   const Product({
     required this.id,
     required this.name,
     required this.year,
-    this.age,
-    this.distillery,
-    this.region,
-    this.country,
-    this.type,
-    this.ageStatement,
-    this.filled,
-    this.bottled,
-    this.caskNumber,
-    this.abv,
-    this.size,
-    this.finish,
+    required this.age,
+    required this.distillery,
+    required this.region,
+    required this.country,
+    required this.type,
+    required this.ageStatement,
+    required this.filled,
+    required this.bottled,
+    required this.caskNumber,
+    required this.abv,
+    required this.size,
+    required this.finish,
   });
 
   factory Product.fromJson(Map<String, dynamic> json) =>
