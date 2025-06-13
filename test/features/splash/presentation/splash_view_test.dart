@@ -6,8 +6,8 @@ import 'package:one_cask_at_a_time/features/splash/presentation/widgets/splash_v
 
 import '../../../helpers/pump_app.dart';
 
-void main(){
-  group('$SplashView', (){
+void main() {
+  group('$SplashView', () {
     late StackRouter router;
 
     setUp(() {

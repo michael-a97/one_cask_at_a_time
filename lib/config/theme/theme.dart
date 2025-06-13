@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 part 'spacing.dart';
+
 class AppColors {
   static const Color primaryColor = Color(0xFF112328);
   static const Color primaryDarkColor = Color(0xFF0B1519);
@@ -85,5 +86,5 @@ final theme = ThemeData(
       padding: const EdgeInsets.symmetric(vertical: Spacing.lg),
       elevation: 0,
     ),
-  )
+  ),
 );
