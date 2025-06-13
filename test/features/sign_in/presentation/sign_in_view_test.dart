@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:one_cask_at_a_time/config/config.dart';
 import 'package:one_cask_at_a_time/core/core.dart';
 import 'package:one_cask_at_a_time/features/features.dart';
 
@@ -58,6 +59,9 @@ void main() {
 
     testWidgets('shows success snackbar when successful', (tester) async {
       const signInState = SignInState(status: LoadingStatus.success);
+      when(
+        () => router.replaceAll([const HomeRoute()]),
+      ).thenAnswer((_) async {});
       whenListen(signInCubit, Stream.value(signInState));
       when(() => signInCubit.state).thenReturn(signInState);
       when(() => signInCubit.close()).thenAnswer((_) async {});
@@ -67,6 +71,7 @@ void main() {
 
       expect(find.byType(SnackBar), findsOne);
       expect(find.text('Successfully signed in!'), findsOne);
+      verify(() => router.replaceAll([const HomeRoute()])).called(1);
     });
 
     testWidgets('shows loading dialog when loading', (tester) async {
